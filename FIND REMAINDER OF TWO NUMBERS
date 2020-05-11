@@ -1,0 +1,117 @@
+package rem;
+
+import java.applet.*;
+
+
+import java.awt.event.*;
+
+
+import java.awt.*;
+
+
+public class rem extends Applet implements ActionListener
+{
+
+	
+	
+/*<Applet code=Sample width=500 height=500> </Applet> */
+
+	
+		
+		
+		  
+	
+Label l1,l2,l3;
+		  
+	
+TextField t1,t2,t3;
+		  
+	
+Button b;
+		 
+	
+public void init()
+		  
+	
+{
+		      
+	
+l1=new Label("Enter a number1: ");
+		      
+
+		      
+	
+l2=new Label("Enter a number 2");
+
+	
+l3=new Label("Result");	      	      
+	
+t1=new TextField(10);
+
+	
+t2=new TextField(10);
+		      
+	
+t3=new TextField(10);
+		    
+		     
+	
+b=new Button("Check reminder");
+		     
+		      
+	
+add(l1);
+		      
+	
+add(t1);
+		      
+	
+add(l2);
+		      
+	
+add(t2);
+
+	
+add(b);
+
+	
+add(l3);
+	
+add(t3);	      
+
+		      
+	
+b.addActionListener(this);
+		     
+		  
+	
+}
+		  
+	
+public void actionPerformed(ActionEvent ae)
+		
+	
+{
+			
+	
+int n1 = Integer.parseInt(t1.getText());
+
+	
+int n2= Integer.parseInt(t1.getText());
+    
+int reminder;
+	
+if (ae.getSource() == b) 
+	
+{
+				
+	 
+reminder= (int) n1%n2;
+	
+t3.setText(String.valueOf(reminder));
+	
+}
+	
+}
+
+}
